@@ -10,6 +10,7 @@ void Setup_USI_Master_TX(void);
 void Setup_USI_Master_RX(void);
 
 void init_i2c(int slave_address);
+void init_display();
 
 void long_delay();
 void delay();

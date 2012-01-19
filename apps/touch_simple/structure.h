@@ -23,13 +23,15 @@
 #include <stdint.h>
 
 /* Public Globals */
-extern const struct Element middle_element;
+//extern const struct Element middle_element;
 extern const struct Element up_element;
 extern const struct Element down_element;
 extern const struct Element left_element;
 extern const struct Element right_element;       
 
-extern const struct Sensor wheel_buttons;    
+//extern const struct Sensor wheel_buttons;
+
+extern const struct Sensor button_bar;
 
 //****** RAM ALLOCATION ********************************************************
 // TOTAL_NUMBER_OF_ELEMENTS represents the total number of elements used, even if 

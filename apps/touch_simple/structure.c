@@ -12,30 +12,17 @@
 
 #include "structure.h"
 
-// Middle Element (P2.5)
-const struct Element middle_element = {
-
-              .inputPxselRegister = (unsigned char *)&P2SEL,  
-              .inputPxsel2Register = (unsigned char *)&P2SEL2,  
-              .inputBits = BIT5,
-              // When using an abstracted function to measure the element
-              // the 100*(maxResponse - threshold) < 0xFFFF
-              // ie maxResponse - threshold < 655
-              .maxResponse = 100+655,		
-              .threshold = 100
-};
-
 // Up Element (P2.4)
 const struct Element up_element = {
 
               .inputPxselRegister = (unsigned char *)&P2SEL,  
               .inputPxsel2Register = (unsigned char *)&P2SEL2,  
-              .inputBits = BIT4,
+              .inputBits = BIT0,
               // When using an abstracted function to measure the element
               // the 100*(maxResponse - threshold) < 0xFFFF
               // ie maxResponse - threshold < 655
-              .maxResponse = 100+655,		
-              .threshold = 100
+              .maxResponse = 3000, //was 100+655,	
+              .threshold = 1000
 };
 
 // Left Element (P2.1)
@@ -47,8 +34,8 @@ const struct Element left_element = {
               // When using an abstracted function to measure the element
               // the 100*(maxResponse - threshold) < 0xFFFF
               // ie maxResponse - threshold < 655
-              .maxResponse = 100+655,		
-              .threshold = 100
+              .maxResponse = 3000, //was 100+655,	
+              .threshold = 1000 // was 100
 };
 
 // Right Element (P2.3)
@@ -56,12 +43,12 @@ const struct Element right_element = {
 
               .inputPxselRegister = (unsigned char *)&P2SEL,  
               .inputPxsel2Register = (unsigned char *)&P2SEL2,  
-              .inputBits = BIT3,
+              .inputBits = BIT4,
               // When using an abstracted function to measure the element
               // the 100*(maxResponse - threshold) < 0xFFFF
               // ie maxResponse - threshold < 655
-              .maxResponse = 100+655,		
-              .threshold = 100
+              .maxResponse = 3000, //was 100+655,
+              .threshold = 1000 // was 100
 };
 
 // Down Element (P2.2)
@@ -69,12 +56,12 @@ const struct Element down_element = {
 
               .inputPxselRegister = (unsigned char *)&P2SEL,  
               .inputPxsel2Register = (unsigned char *)&P2SEL2,  
-              .inputBits = BIT2,
+              .inputBits = BIT5,
               // When using an abstracted function to measure the element
               // the 100*(maxResponse - threshold) < 0xFFFF
               // ie maxResponse - threshold < 655
-              .maxResponse = 100+655,		
-              .threshold = 100
+              .maxResponse = 3000, //was 100+655,		
+              .threshold = 1000 // was 100
 };
 
 //*** CAP TOUCH HANDLER *******************************************************/
@@ -82,17 +69,17 @@ const struct Element down_element = {
 // capacitance, and the function of the group
 
 //PinOsc Wheel
-const struct Sensor wheel_buttons =
+//const struct Sensor wheel_buttons =
+const struct Sensor button_bar =
                { 
                   .halDefinition = RO_PINOSC_TA0_WDTp,
-                  .numElements = 5,
+                  .numElements = 4,
                   .baseOffset = 0,
                   // Pointer to elements
-                  .arrayPtr[0] = &up_element,  			// point to up element
-                  .arrayPtr[1] = &down_element,  		// point to down element
-                  .arrayPtr[2] = &left_element,  		// point to left element
+                  .arrayPtr[0] = &left_element,  			// point to up element
+                  .arrayPtr[1] = &up_element,  		// point to down element
+                  .arrayPtr[2] = &down_element,  		// point to left element
                   .arrayPtr[3] = &right_element,  		// point to right element
-                  .arrayPtr[4] = &middle_element,  		// point to middle element
                   // Timer Information
                   .measGateSource= GATE_WDT_ACLK,     //  0->SMCLK, 1-> ACLK
                   .accumulationCycles= WDTp_GATE_64   //64 - Default                                  

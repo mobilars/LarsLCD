@@ -1,6 +1,4 @@
 
-//#include "msp430G2231.h" 
-//#include <msp430g2452.h>
 
 #include <msp430.h>
 #include "i2c_lib.h"
@@ -22,28 +20,14 @@ void Data_RX (void);
 void init_i2c(int slave_address)
 {
   volatile unsigned int i;                  // Use volatile to prevent removal
-
-  WDTCTL = WDTPW + WDTHOLD;                 // Stop watchdog
-  if (CALBC1_1MHZ == 0xFF || CALDCO_1MHZ == 0xFF)                                     
-  {  
-    while(1);                               // If calibration constants erased
-                                            // do not load, trap CPU!!
-  } 
-  BCSCTL1 = CALBC1_16MHZ;                    // Set DCO
-  DCOCTL = CALDCO_16MHZ;
-
-//  BCSCTL1 = CALBC1_1MHZ;                    // Set DCO
-//  DCOCTL = CALDCO_1MHZ;
   
   P1OUT = BIT6 | BIT7; //0xC0;                             // P1.6 & P1.7 Pullups, others to 0
   P1REN |= BIT6 | BIT7; //0xC0;                            // P1.6 & P1.7 Pullups
-//  P1DIR = 0xFF;                             // Unused pins as outputs
-//  P2OUT = 0;
-//  P2DIR = 0xFF;
   
   SLV_Addr = slave_address;
     
 }
+
 
 /******************************************************
 // USI interrupt service routine
