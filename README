@@ -1,3 +1,5 @@
 These is the code and samples for the LarsLCD MSP430 Boosterpack. 
 
 These files are BSD-licensed. 
+
+The CapSense library is from Texas Instrument
