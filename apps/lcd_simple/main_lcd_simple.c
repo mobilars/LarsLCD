@@ -21,28 +21,30 @@ int main()
   init_display();
   while (1) {
     drawBitmap(blackbird_96_64, 96, 8, 0,0);
+    long_delay();
     clear();
+    long_delay();
     drawBitmap(big_9, 32, 6, 32, 1);
-    delay();
+    long_delay();
     drawBitmap(big_8, 32, 6, 32, 1);
-    delay();
+    long_delay();
     drawBitmap(big_7, 32, 6, 32, 1);
-    delay();
+    long_delay();
     drawBitmap(big_6, 32, 6, 32, 1);
-    delay();
+    long_delay();
     drawBitmap(big_5, 32, 6, 32, 1);
-    delay();
+    long_delay();
     drawBitmap(big_4, 32, 6, 32, 1);
-    delay();
+    long_delay();
     drawBitmap(big_3, 32, 6, 32, 1);
-    delay();
+    long_delay();
     drawBitmap(big_2, 32, 6, 32, 1);
-    delay();
+    long_delay();
     //drawBitmap(big_1, 32, 6, 32, 1);
-    delay();
+    long_delay();
     clear();
     drawBitmap(change, 32, 4, 32, 2);
-    delay();
+    long_delay();
   }
 }
 

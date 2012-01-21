@@ -19,13 +19,15 @@ void init_display()
 {
   init_i2c(0x78);
   
-  P1DIR |= BIT4;
+  P1DIR |= BIT4 | BIT6 | BIT7;
   
   // Reset the display
   P1OUT &= ~BIT4;
   delay();
-  P1OUT |= BIT4;  
+  P1OUT |= BIT4;  // Do we need this as output, or can we just tie it to the reset on chip
   
+   __delay_cycles(10000);
+   
   send(CMD, 0x21); // extended instruction set control (H=1)
   send(CMD, 0x13); // bias system (1:48)
   //send(CMD, 0xE0); 
@@ -35,7 +37,7 @@ void init_display()
   //send(CMD, 0x39); // part 1
   send(CMD, 0x20);
   send(CMD, 0x09); // all display segments on
-  send(CMD,0x0c);  // normal mode (0x0d = inverse mode)
+  send(CMD, 0x0c);  // normal mode (0x0d = inverse mode)
   //send(CMD, 0x0d); // reverse mode
   send(CMD, 0x11); // VOP range high
   send(CMD, 0x80);
@@ -55,6 +57,22 @@ void send(char config, char data)
 
 void clear()
 {
+  // Todo implement burst mode for SW I2C
+  setCursor(0, 0);
+
+  for (int i = 0; i < 9; i++) {
+      setCursor(0, i);
+      for (unsigned char j = 0; j < width; j++) 
+      {
+          send(DATA, 0x00);
+      }
+  }
+  setCursor(0, 0);
+}
+
+/*
+void clear()
+{
   setCursor(0, 0);
   char d[21];
   d[0] = DATA;
@@ -68,6 +86,7 @@ void clear()
   }
   setCursor(0, 0);
 }
+*/
 
 void clearLine()
 {

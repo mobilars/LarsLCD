@@ -21,7 +21,7 @@ void init_i2c(int slave_address)
 {
   volatile unsigned int i;                  // Use volatile to prevent removal
   
-  P1OUT = BIT6 | BIT7; //0xC0;                             // P1.6 & P1.7 Pullups, others to 0
+  P1OUT |= BIT6 | BIT7; //0xC0;                             // P1.6 & P1.7 Pullups, others to 0
   P1REN |= BIT6 | BIT7; //0xC0;                            // P1.6 & P1.7 Pullups
   
   SLV_Addr = slave_address;
@@ -228,6 +228,7 @@ void Master_Transmit(char data[], int length){
     USICTL1 |= USIIFG;                      // Set flag and start communication
     LPM0;                                   // CPU off, await USI interrupt
 }
+
 void Master_Receive(void){
   number_of_bytes = number_of_RX_bytes;
   Setup_USI_Master_RX();

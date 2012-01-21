@@ -66,7 +66,7 @@
 #ifndef CAP_TOUCH_HAL
 #define CAP_TOUCH_HAL
 
-#include "structure.h"
+#include "../apps/touch_simple/structure.h"
 
 void TI_CTS_RO_COMPAp_TA0_WDTp_HAL(const struct Sensor *, uint16_t *);
 
