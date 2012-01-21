@@ -19,7 +19,19 @@ int main()
   DCOCTL = CALDCO_16MHZ;
     
   init_display();
+  drawBitmap(blackbird_96_64, 96, 8, 0,0);
+  long_delay();
+    
+  int i = 0;
   while (1) {
+
+    write('a'+(i++));
+    if (i > 26) {
+      i = 0;
+    }
+    
+    __delay_cycles(30000);
+    /*
     drawBitmap(blackbird_96_64, 96, 8, 0,0);
     long_delay();
     clear();
@@ -44,7 +56,7 @@ int main()
     long_delay();
     clear();
     drawBitmap(change, 32, 4, 32, 2);
-    long_delay();
+    long_delay();*/
   }
 }
 

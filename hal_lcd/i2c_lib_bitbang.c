@@ -29,8 +29,11 @@ void Master_Transmit(char data[], int length)
 {
     i2cm_start( );
     i2cm_out( SLV_Addr );
-    i2cm_out( data[0] ) ;
-    i2cm_out( (unsigned int) data[1] ) ;
+    for (int i = 0; i < length; i++) {
+        i2cm_out( data[i] ) ;
+    }
+    //i2cm_out( data[0] ) ;
+    //i2cm_out( (unsigned int) data[1] ) ;
     i2cm_stop( );   
 }
 
