@@ -24,10 +24,10 @@
 
 /* Public Globals */
 //extern const struct Element middle_element;
-extern const struct Element up_element;
-extern const struct Element down_element;
-extern const struct Element left_element;
-extern const struct Element right_element;       
+extern const struct Element a_element;
+extern const struct Element b_element;
+extern const struct Element c_element;
+extern const struct Element d_element;       
 
 //extern const struct Sensor wheel_buttons;
 

@@ -10,14 +10,14 @@
 //  accumulation cycles
 //******************************************************************************
 
-#include "structure.h"
+#include "sense_structure.h"
 
-// Up Element (P2.4)
-const struct Element up_element = {
+// A Element (P2.2)
+const struct Element a_element = {
 
               .inputPxselRegister = (unsigned char *)&P2SEL,  
               .inputPxsel2Register = (unsigned char *)&P2SEL2,  
-              .inputBits = BIT0,
+              .inputBits = BIT2,
               // When using an abstracted function to measure the element
               // the 100*(maxResponse - threshold) < 0xFFFF
               // ie maxResponse - threshold < 655
@@ -25,8 +25,8 @@ const struct Element up_element = {
               .threshold = 1000
 };
 
-// Left Element (P2.1)
-const struct Element left_element = {
+// B Element (P2.1)
+const struct Element b_element = {
 
               .inputPxselRegister = (unsigned char *)&P2SEL,  
               .inputPxsel2Register = (unsigned char *)&P2SEL2,  
@@ -38,8 +38,8 @@ const struct Element left_element = {
               .threshold = 1000 // was 100
 };
 
-// Right Element (P2.3)
-const struct Element right_element = {
+// C Element (P2.4)
+const struct Element c_element = {
 
               .inputPxselRegister = (unsigned char *)&P2SEL,  
               .inputPxsel2Register = (unsigned char *)&P2SEL2,  
@@ -51,12 +51,12 @@ const struct Element right_element = {
               .threshold = 1000 // was 100
 };
 
-// Down Element (P2.2)
-const struct Element down_element = {
+// D Element (P2.3)
+const struct Element d_element = {
 
               .inputPxselRegister = (unsigned char *)&P2SEL,  
               .inputPxsel2Register = (unsigned char *)&P2SEL2,  
-              .inputBits = BIT5,
+              .inputBits = BIT3,
               // When using an abstracted function to measure the element
               // the 100*(maxResponse - threshold) < 0xFFFF
               // ie maxResponse - threshold < 655
@@ -76,10 +76,10 @@ const struct Sensor button_bar =
                   .numElements = 4,
                   .baseOffset = 0,
                   // Pointer to elements
-                  .arrayPtr[0] = &left_element,  			// point to up element
-                  .arrayPtr[1] = &up_element,  		// point to down element
-                  .arrayPtr[2] = &down_element,  		// point to left element
-                  .arrayPtr[3] = &right_element,  		// point to right element
+                  .arrayPtr[0] = &a_element,  			// point to up element
+                  .arrayPtr[1] = &b_element,  		// point to down element
+                  .arrayPtr[2] = &c_element,  		// point to left element
+                  .arrayPtr[3] = &d_element,  		// point to right element
                   // Timer Information
                   .measGateSource= GATE_WDT_ACLK,     //  0->SMCLK, 1-> ACLK
                   .accumulationCycles= WDTp_GATE_64   //64 - Default                                  

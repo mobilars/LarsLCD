@@ -18,5 +18,6 @@ extern const unsigned char big_7[];
 extern const unsigned char big_8[];
 extern const unsigned char big_9[];
 extern const unsigned char change[];
+extern const unsigned char logo43oh[];
 
 #endif
