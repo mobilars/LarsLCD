@@ -27,12 +27,13 @@ unsigned char line;
 // Delay function. # of CPU cycles delayed is similar to "cycles". Specifically,
 // it's ((cycles-15) % 6) + 15.  Not exact, but gives a sense of the real-time
 // delay.  Also, if MCLK ~1MHz, "cycles" is similar to # of useconds delayed.
+/*
 void delay_cycles(unsigned int cycles)
 {
   while(cycles>15)                          // 15 cycles consumed by overhead
     cycles = cycles - 6;                    // 6 cycles consumed each iteration
 }
-
+*/
 
 
 //******************************************************************************
@@ -108,7 +109,6 @@ void SPIBBSetup(void)
 
   P1OUT &= ~( CSB_PIN | SCLK_PIN);
   __delay_cycles(10000);
-  //P1OUT |= RESB_PIN;
   
   __delay_cycles(10000);
   
@@ -123,27 +123,12 @@ void SPIBBSetup(void)
   SPIWrite(CMD, 0x80);  //Set X -> 0x80 + x = 0b1xxx xxxx
   SPIWrite(CMD, 0x28);  //Function set PD=0,H1=0,H0=0 reverse directions
   //SPIWrite(CMD, 0x38);  //Function set PD=0,H1=0,H0=0 reverse directions
-/*
-  SPIWrite(CMD, 0x21); // extended instruction set control (H=1)
-  SPIWrite(CMD, 0x13); // bias system (1:48)
-  //send(CMD, 0xE0); 
-  SPIWrite(CMD, 0X80 + 0X00); //0xB0); // VOP level 
-  //send(CMD, 0x29); // partial display mode
-  SPIWrite(CMD, 0x28); // full display mode
-  //send(CMD, 0x39); // part 1
-  //SPIWrite(CMD, 0x20);
-  //SPIWrite(CMD, 0x09); // all display segments on
-  SPIWrite(CMD, 0x0c);  // normal mode (0x0d = inverse mode)
-  //send(CMD, 0x0d); // reverse mode
-  //SPIWrite(CMD, 0x11); // VOP range high
-  //SPIWrite(CMD, 0x80);
-  //SPIWrite(CMD, 0x40);
-  */
+
 }
 
 void partial()
 {
-  
+  // Doesn't work. 
   SPIWrite(CMD, 0x21);  //Function set PD=0,H1=0,H0=1
   SPIWrite(CMD, 0x10+0x00);  //SET Bias system
   SPIWrite(CMD, 0X80+0x30);  //SET V0
