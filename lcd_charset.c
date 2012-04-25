@@ -2,6 +2,11 @@
 #ifndef CHARSET
 #define CHARSET
 
+
+const unsigned char ball [] = {
+0x00, 0x3C, 0x7E, 0xFF, 0xFF
+};
+
 // The 7-bit ASCII character set...
 const unsigned char charset[][5] = {
   { 0x00, 0x00, 0x00, 0x00, 0x00 },  // 20 space

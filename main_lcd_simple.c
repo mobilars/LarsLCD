@@ -62,7 +62,8 @@ void main (void)
     else {
         if (last != 0) {
           clear();
-          drawBitmap(logo43oh, 96, 4, 0, 2);
+          //drawBitmap(logo43oh, 96, 4, 0, 2);
+          drawBitmap(blackbird_96_64, 96, 8, 0,0);
         }
         last = 0;
         setCursor(0, 0);

@@ -2829,7 +2829,6 @@
     <name>sense</name>
     <excluded>
       <configuration>Simple</configuration>
-      <configuration>Game</configuration>
     </excluded>
     <file>
       <name>$PROJ_DIR$\CTS_HAL.c</name>
@@ -2845,6 +2844,9 @@
     </file>
     <file>
       <name>$PROJ_DIR$\main_touch_lcd.c</name>
+      <excluded>
+        <configuration>Game</configuration>
+      </excluded>
     </file>
     <file>
       <name>$PROJ_DIR$\sense_structure.c</name>

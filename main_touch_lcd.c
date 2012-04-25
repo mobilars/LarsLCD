@@ -85,11 +85,8 @@ void main(void)
                             clear();
                             last = 2;
                             drawBitmap(big_1, 32, 6, 32, 1);
-//                            setCursor(0, 0);
-//                            writeChar('A');
                         }
 		}
-		// Down Element
 		if(keyPressed == &b_element)
 		{
 			P1OUT |= BIT0;				// Turn on center LED
@@ -97,11 +94,8 @@ void main(void)
                             clear();
                             last = 3;
                             drawBitmap(big_2, 32, 6, 32, 1);
-//                            setCursor(0, 0);
-//                            writeChar('B');
                         }
 		}
-		// Left Element
 		if(keyPressed == &c_element)
 		{
 			P1OUT |= BIT0;				// Turn on center LED
@@ -109,11 +103,8 @@ void main(void)
                             clear();
                             last = 1;
                             drawBitmap(big_3, 32, 6, 32, 1);
-//                            setCursor(0, 0);
-//                            writeChar('C');
                         }
 		}
-		// Right Element
 		if(keyPressed == &d_element)
 		{
 			P1OUT |= BIT0;				// Turn on center LED
@@ -121,8 +112,6 @@ void main(void)
                             clear();
                             last = 4;
                             drawBitmap(big_4, 32, 6, 32, 1);
-//                            setCursor(0, 0);
-//                            writeChar('D');
                         }
 		}		
 	  }
