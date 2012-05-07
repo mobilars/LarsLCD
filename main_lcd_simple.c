@@ -68,6 +68,7 @@ void main (void)
         last = 0;
         setCursor(0, 0);
         writeString(" Press a button ");
+        writeMegaNumber(3, 1, '0');
     }
   }
   

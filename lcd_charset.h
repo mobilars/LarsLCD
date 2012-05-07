@@ -21,5 +21,6 @@ extern const unsigned char big_8[];
 extern const unsigned char big_9[];
 extern const unsigned char change[];
 extern const unsigned char logo43oh[];
+extern const unsigned char font_5_8[256][5];
 
 #endif

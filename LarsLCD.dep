@@ -2,10 +2,15 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>3968996180</fileChecksum>
+  <fileChecksum>2212120005</fileChecksum>
   <configuration>
-    <name>Game</name>
+    <name>DotFactory</name>
     <outputs>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$TOOLKIT_DIR$\config\lnk430G2553.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
       <file>$PROJ_DIR$\main_touch_lcd.c</file>
       <file>$PROJ_DIR$\CTS_HAL.h</file>
       <file>$PROJ_DIR$\CTS_HAL.c</file>
@@ -19,156 +24,64 @@
       <file>$PROJ_DIR$\lcd_charset.h</file>
       <file>$PROJ_DIR$\main_game.c</file>
       <file>$PROJ_DIR$\main_lcd_simple.c</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
       <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\inc\in430.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
-      <file>$PROJ_DIR$\Game\Obj\lcd_charset.pbi</file>
-      <file>$PROJ_DIR$\Game\Exe\LarsLCD.d43</file>
-      <file>$PROJ_DIR$\Game\Obj\LarsLCD.pbd</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
-      <file>$PROJ_DIR$\Game\Obj\main_game.r43</file>
-      <file>$PROJ_DIR$\Game\Obj\main_game.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
-      <file>$TOOLKIT_DIR$\config\lnk430G2553.xcl</file>
-      <file>$PROJ_DIR$\Game\Obj\lcd.pbi</file>
-      <file>$PROJ_DIR$\Game\Obj\lcd_charset.r43</file>
-      <file>$PROJ_DIR$\Game\Obj\CTS_HAL.r43</file>
-      <file>$PROJ_DIR$\Game\Obj\lcd.r43</file>
-      <file>$PROJ_DIR$\Game\Obj\CTS_Layer.r43</file>
-      <file>$PROJ_DIR$\Game\Obj\sense_structure.pbi</file>
-      <file>$PROJ_DIR$\Game\Obj\main_touch_lcd.pbi</file>
-      <file>$PROJ_DIR$\Game\Obj\CTS_Layer.pbi</file>
-      <file>$PROJ_DIR$\Game\Obj\main_touch_lcd.r43</file>
-      <file>$PROJ_DIR$\Game\Obj\CTS_HAL.pbi</file>
-      <file>$PROJ_DIR$\Game\Obj\sense_structure.r43</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\main_lcd_dotfactory.pbi</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\main_lcd_dotfactory.r43</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\LarsLCD.pbd</file>
+      <file>$PROJ_DIR$\DotFactory\Exe\LarsLCD.d43</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\lcd_charset.pbi</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\dotfactory.pbi</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\main_lcd_simple.pbi</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\lcd.pbi</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\lcd_charset.r43</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\dotfactory.r43</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\lcd.r43</file>
+      <file>$PROJ_DIR$\DotFactory\Obj\main_lcd_simple.r43</file>
+      <file>$PROJ_DIR$\DotFactory\List\LarsLCD.map</file>
+      <file>$PROJ_DIR$\dotfactory.c</file>
+      <file>$PROJ_DIR$\5x8_vertikal_MSB_1.h</file>
+      <file>$PROJ_DIR$\12x16_vertikal_MSB_1.h</file>
+      <file>$PROJ_DIR$\5x8_vertikal_LSB_1.h</file>
+      <file>$PROJ_DIR$\5x8_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\6x8_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\6x8_vertikal_LSB_1.h</file>
+      <file>$PROJ_DIR$\8x8_vertikal_LSB_1.h</file>
+      <file>$PROJ_DIR$\8x8_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\10x16_vertikal_LSB_1.h</file>
+      <file>$PROJ_DIR$\10x16_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\12x16_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\dotfactory.h</file>
+      <file>$PROJ_DIR$\main_lcd_dotfactory.c</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 27</file>
+          <file> 22 31</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main_touch_lcd.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 40</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 14 32 19 20 4 1 6 25 13 24 22 18 16 23 8 10</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\CTS_HAL.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 36</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 43</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 1 6 14 32 19 20 25 13 24 22 29 18 16 23</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 1 6 14 32 19 20 25 13 24 22 18 16 23</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\CTS_Layer.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 38</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 41</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 4 1 6 14 32 19 20 25 13 24 22 29 18 16 23 15 21</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 4 1 6 14 32 19 20 25 13 24 22 18 16 23 15 21</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\sense_structure.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 44</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 39</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 6 14 32 19 20 25 13 24 22 29 18 16 23</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 6 14 32 19 20 25 13 24 22 18 16 23</file>
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\lcd.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 37</file>
+          <file> 29</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 34</file>
+          <file> 26</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 14 32 19 20 8 10</file>
+          <file> 2 4 1 0 13 15</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 14 32 19 20 8 10</file>
+          <file> 2 4 1 0 13 15</file>
         </tool>
       </inputs>
     </file>
@@ -177,16 +90,16 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 35</file>
+          <file> 27</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 26</file>
+          <file> 23</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\main_game.c</name>
+      <name>$PROJ_DIR$\main_lcd_simple.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
@@ -194,42 +107,112 @@
         </tool>
         <tool>
           <name>BICOMP</name>
+          <file> 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2 4 1 0 13 15</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\DotFactory\Obj\LarsLCD.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 24 26 23 19</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\DotFactory\Exe\LarsLCD.d43</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
           <file> 31</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
+          <name>XLINK</name>
+          <file> 3 28 29 27 20 18</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\dotfactory.c</name>
+      <outputs>
+        <tool>
           <name>ICC430</name>
-          <file> 14 32 19 20 8 10 4 1 6 25 13 24 22 29 18 16 23</file>
+          <file> 28</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 14 32 19 20 8 10 4 1 6 25 13 24 22 18 16 23</file>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 44 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44 13</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Game\Exe\LarsLCD.d43</name>
-      <inputs>
+      <name>$PROJ_DIR$\main_lcd_dotfactory.c</name>
+      <outputs>
         <tool>
-          <name>XLINK</name>
-          <file> 33 36 38 37 35 30 44 17</file>
+          <name>ICC430</name>
+          <file> 20</file>
         </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Game\Obj\LarsLCD.pbd</name>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
       <inputs>
         <tool>
-          <name>BILINK</name>
-          <file> 43 41 34 26 31 39</file>
+          <name>ICC430</name>
+          <file> 2 4 1 0 13 15 44</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2 4 1 0 13 15 44</file>
         </tool>
       </inputs>
     </file>
   </configuration>
   <configuration>
-    <name>Sense</name>
+    <name>Game</name>
     <outputs>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Game\Exe\LarsLCD.d43</file>
+      <file>$PROJ_DIR$\Game\Obj\LarsLCD.pbd</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
+      <file>$TOOLKIT_DIR$\config\lnk430G2553.xcl</file>
+      <file>$PROJ_DIR$\Game\Obj\lcd_charset.r43</file>
+      <file>$PROJ_DIR$\Game\Obj\lcd.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+      <file>$PROJ_DIR$\Game\Obj\CTS_HAL.r43</file>
+      <file>$PROJ_DIR$\Game\Obj\main_game.pbi</file>
+      <file>$PROJ_DIR$\Game\Obj\main_game.r43</file>
+      <file>$PROJ_DIR$\Game\Obj\lcd.r43</file>
+      <file>$PROJ_DIR$\Game\Obj\CTS_Layer.r43</file>
+      <file>$PROJ_DIR$\Game\Obj\sense_structure.pbi</file>
+      <file>$PROJ_DIR$\Game\Obj\CTS_Layer.pbi</file>
       <file>$PROJ_DIR$\main_touch_lcd.c</file>
       <file>$PROJ_DIR$\CTS_HAL.h</file>
       <file>$PROJ_DIR$\CTS_HAL.c</file>
@@ -241,119 +224,61 @@
       <file>$PROJ_DIR$\lcd.h</file>
       <file>$PROJ_DIR$\lcd_charset.c</file>
       <file>$PROJ_DIR$\lcd_charset.h</file>
-      <file>$PROJ_DIR$\main_lcd_simple.c</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
+      <file>$PROJ_DIR$\main_game.c</file>
+      <file>$PROJ_DIR$\Game\Obj\CTS_HAL.pbi</file>
+      <file>$PROJ_DIR$\Game\Obj\main_touch_lcd.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\Game\Obj\lcd_charset.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+      <file>$PROJ_DIR$\Game\Obj\main_touch_lcd.r43</file>
+      <file>$PROJ_DIR$\Game\Obj\sense_structure.r43</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
       <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\inc\in430.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_lcdspi.r43</file>
-      <file>$PROJ_DIR$\apps\touch_simple\structure.h</file>
-      <file>$PROJ_DIR$\hal_lcd\i2c_lib.h</file>
-      <file>$PROJ_DIR$\hal_lcd\display.h</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_lcdspi.pbi</file>
-      <file>$PROJ_DIR$\hal_lcd\i2c_lib_bitbang.c</file>
-      <file>$PROJ_DIR$\hal_lcd\I2C_master.h</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_nothing.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_nothing.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\I2C_master.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\display.r43</file>
-      <file>$PROJ_DIR$\charset.h</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_touch_test.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\i2c_lib_bitbang.r43</file>
-      <file>$PROJ_DIR$\hal_sense\CTS_HAL.c</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_lcd_simple.r43</file>
-      <file>$PROJ_DIR$\hal_sense\CTS_HAL.h</file>
-      <file>$PROJ_DIR$\spi.h</file>
-      <file>$PROJ_DIR$\hal_sense\CTS_Layer.c</file>
-      <file>$PROJ_DIR$\charset.c</file>
-      <file>$PROJ_DIR$\hal_sense\CTS_Layer.h</file>
-      <file>$PROJ_DIR$\spi.c</file>
-      <file>$PROJ_DIR$\apps\touch_simple\main_touch_test.c</file>
-      <file>$PROJ_DIR$\apps\touch_simple\main_touch_simple.c</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_touch_lcd.r43</file>
-      <file>$PROJ_DIR$\main_lcdspi.c</file>
-      <file>$PROJ_DIR$\hal_lcd\I2C_master.c</file>
-      <file>$PROJ_DIR$\hal_lcd\charset.c</file>
-      <file>$PROJ_DIR$\hal_lcd\display.c</file>
-      <file>$PROJ_DIR$\apps\lcd_simple\main_lcd_simple.c</file>
-      <file>$PROJ_DIR$\Sense\Obj\display.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\structure.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\charset.pbi</file>
-      <file>$PROJ_DIR$\apps\touch_simple\structure.c</file>
-      <file>$PROJ_DIR$\apps\touch_simple\main_touch_lcd.c</file>
-      <file>$PROJ_DIR$\Sense\Obj\I2C_master.pbi</file>
-      <file>$PROJ_DIR$\Sense\Exe\LarsLCD.d43</file>
-      <file>$PROJ_DIR$\Sense\Obj\CTS_Layer.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\i2c_lib_bitbang.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_touch_simple.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
-      <file>$TOOLKIT_DIR$\config\lnk430G2553.xcl</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_lcd_simple.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\CTS_HAL.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\i2c_lib.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_touch_lcd.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\i2c_lib.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\charset.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\LarsLCD.pbd</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_touch_simple.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\CTS_Layer.r43</file>
-      <file>$PROJ_DIR$\main_nothing.c</file>
-      <file>$TOOLKIT_DIR$\inc\msp430g2452.h</file>
-      <file>$PROJ_DIR$\Sense\Obj\structure.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\spi.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\spi.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\CTS_HAL.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\lcd_charset.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\lcd.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\lcd_charset.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\lcd.pbi</file>
-      <file>$PROJ_DIR$\Sense\Obj\main_touch_test.r43</file>
-      <file>$PROJ_DIR$\main_touch_simple.c</file>
-      <file>$PROJ_DIR$\main_touch_test.c</file>
-      <file>$PROJ_DIR$\hal_lcd\charset.h</file>
-      <file>$PROJ_DIR$\hal_lcd\i2c_lib.c</file>
-      <file>$PROJ_DIR$\Sense\Obj\sense_structure.r43</file>
-      <file>$PROJ_DIR$\Sense\Obj\sense_structure.pbi</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 61</file>
+          <file> 8</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Game\Exe\LarsLCD.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 11 15 19 18 12 17 41 43</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Game\Obj\LarsLCD.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 34 21 13 38 16 20</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\main_touch_lcd.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 49</file>
+          <file> 40</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 71</file>
+          <file> 35</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 13 66 18 19 4 1 6 24 12 23 21 65 17 15 22 8 10</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 13 66 18 19 4 1 6 24 12 23 21 17 15 22 8 10</file>
+          <file> 6 14 4 2 26 23 28 36 7 39 0 1 42 37 30 32</file>
         </tool>
       </inputs>
     </file>
@@ -362,17 +287,21 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 69</file>
+          <file> 15</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 82</file>
+          <file> 34</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
+          <name>ICC430</name>
+          <file> 23 28 6 14 4 2 36 7 39 0 10 1 42 37</file>
+        </tool>
+        <tool>
           <name>BICOMP</name>
-          <file> 1 6 13 66 18 19 24 12 23 21 17 15 22</file>
+          <file> 23 28 6 14 4 2 36 7 39 0 1 42 37</file>
         </tool>
       </inputs>
     </file>
@@ -381,17 +310,21 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 76</file>
+          <file> 19</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 62</file>
+          <file> 21</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
+          <name>ICC430</name>
+          <file> 26 23 28 6 14 4 2 36 7 39 0 10 1 42 37 5 3</file>
+        </tool>
+        <tool>
           <name>BICOMP</name>
-          <file> 4 1 6 13 66 18 19 24 12 23 21 17 15 22 14 20</file>
+          <file> 26 23 28 6 14 4 2 36 7 39 0 1 42 37 5 3</file>
         </tool>
       </inputs>
     </file>
@@ -400,21 +333,21 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 92</file>
+          <file> 41</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 93</file>
+          <file> 20</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 6 13 66 18 19 24 12 23 21 65 17 15 22</file>
+          <file> 28 6 14 4 2 36 7 39 0 10 1 42 37</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 6 13 66 18 19 24 12 23 21 17 15 22</file>
+          <file> 28 6 14 4 2 36 7 39 0 1 42 37</file>
         </tool>
       </inputs>
     </file>
@@ -423,21 +356,21 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 84</file>
+          <file> 18</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 86</file>
+          <file> 13</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 13 66 18 19 8 10</file>
+          <file> 6 14 4 2 30 32</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 13 66 18 19 8 10</file>
+          <file> 6 14 4 2 30 32</file>
         </tool>
       </inputs>
     </file>
@@ -446,334 +379,160 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 83</file>
+          <file> 12</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 85</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main_lcd_simple.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 40</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 68</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13 66 18 19 8 10</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\hal_lcd\i2c_lib_bitbang.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
           <file> 38</file>
         </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_game.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 17</file>
+        </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 63</file>
+          <file> 16</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
+          <name>ICC430</name>
+          <file> 6 14 4 2 30 32 26 23 28 36 7 39 0 10 1 42 37</file>
+        </tool>
+        <tool>
           <name>BICOMP</name>
-          <file> 13 78 18 19 27 31</file>
+          <file> 6 14 4 2 30 32 26 23 28 36 7 39 0 1 42 37</file>
         </tool>
       </inputs>
     </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Sense</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
+      <file>$TOOLKIT_DIR$\config\lnk430G2553.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+      <file>$PROJ_DIR$\Sense\Obj\CTS_Layer.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\CTS_HAL.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\i2c_lib.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\charset.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\i2c_lib_bitbang.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_touch_simple.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_lcd_simple.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\i2c_lib.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\CTS_Layer.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\LarsLCD.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2452.h</file>
+      <file>$PROJ_DIR$\main_nothing.c</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_touch_lcd.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\structure.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\spi.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\spi.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_touch_simple.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\CTS_HAL.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\lcd_charset.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\lcd.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\lcd_charset.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\lcd.pbi</file>
+      <file>$PROJ_DIR$\main_touch_simple.c</file>
+      <file>$PROJ_DIR$\main_touch_test.c</file>
+      <file>$PROJ_DIR$\hal_lcd\charset.h</file>
+      <file>$PROJ_DIR$\hal_lcd\i2c_lib.c</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_touch_test.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\I2C_master.pbi</file>
+      <file>$PROJ_DIR$\Sense\Exe\LarsLCD.d43</file>
+      <file>$PROJ_DIR$\Sense\Obj\charset.pbi</file>
+      <file>$PROJ_DIR$\hal_lcd\i2c_lib.h</file>
+      <file>$PROJ_DIR$\Sense\Obj\sense_structure.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\sense_structure.pbi</file>
+      <file>$PROJ_DIR$\apps\touch_simple\structure.c</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_lcdspi.r43</file>
+      <file>$PROJ_DIR$\hal_lcd\display.h</file>
+      <file>$PROJ_DIR$\apps\touch_simple\main_touch_lcd.c</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_lcdspi.pbi</file>
+      <file>$PROJ_DIR$\apps\touch_simple\structure.h</file>
+      <file>$PROJ_DIR$\hal_lcd\i2c_lib_bitbang.c</file>
+      <file>$PROJ_DIR$\hal_lcd\I2C_master.h</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_nothing.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_nothing.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\I2C_master.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\display.r43</file>
+      <file>$PROJ_DIR$\charset.h</file>
+      <file>$PROJ_DIR$\hal_sense\CTS_HAL.c</file>
+      <file>$PROJ_DIR$\hal_sense\CTS_HAL.h</file>
+      <file>$PROJ_DIR$\spi.h</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_touch_test.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\i2c_lib_bitbang.r43</file>
+      <file>$PROJ_DIR$\hal_sense\CTS_Layer.c</file>
+      <file>$PROJ_DIR$\charset.c</file>
+      <file>$PROJ_DIR$\hal_sense\CTS_Layer.h</file>
+      <file>$PROJ_DIR$\spi.c</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_lcd_simple.r43</file>
+      <file>$PROJ_DIR$\apps\touch_simple\main_touch_test.c</file>
+      <file>$PROJ_DIR$\apps\touch_simple\main_touch_simple.c</file>
+      <file>$PROJ_DIR$\hal_lcd\I2C_master.c</file>
+      <file>$PROJ_DIR$\main_lcdspi.c</file>
+      <file>$PROJ_DIR$\hal_lcd\display.c</file>
+      <file>$PROJ_DIR$\hal_lcd\charset.c</file>
+      <file>$PROJ_DIR$\Sense\Obj\structure.r43</file>
+      <file>$PROJ_DIR$\Sense\Obj\display.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_touch_lcd.r43</file>
+      <file>$PROJ_DIR$\main_touch_lcd.c</file>
+      <file>$PROJ_DIR$\CTS_HAL.h</file>
+      <file>$PROJ_DIR$\CTS_HAL.c</file>
+      <file>$PROJ_DIR$\CTS_Layer.c</file>
+      <file>$PROJ_DIR$\CTS_Layer.h</file>
+      <file>$PROJ_DIR$\sense_structure.c</file>
+      <file>$PROJ_DIR$\sense_structure.h</file>
+      <file>$PROJ_DIR$\lcd.c</file>
+      <file>$PROJ_DIR$\lcd.h</file>
+      <file>$PROJ_DIR$\lcd_charset.c</file>
+      <file>$PROJ_DIR$\lcd_charset.h</file>
+      <file>$PROJ_DIR$\main_game.c</file>
+      <file>$PROJ_DIR$\main_lcd_simple.c</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+      <file>$PROJ_DIR$\apps\lcd_simple\main_lcd_simple.c</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_game.pbi</file>
+      <file>$PROJ_DIR$\Sense\Obj\main_game.r43</file>
+      <file>$PROJ_DIR$\5x8_vertikal_MSB_1.h</file>
+      <file>$PROJ_DIR$\12x16_vertikal_MSB_1.h</file>
+    </outputs>
     <file>
-      <name>$PROJ_DIR$\hal_sense\CTS_HAL.c</name>
+      <name>[ROOT_NODE]</name>
       <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 69</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 82</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 41 26 13 66 18 19 24 12 23 21 65 17 15 22</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 41 26 13 66 18 19 24 12 23 21 17 15 22</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\hal_sense\CTS_Layer.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 76</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 62</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 45 41 26 13 66 18 19 24 12 23 21 65 17 15 22 14 20</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45 41 26 13 66 18 19 24 12 23 21 17 15 22 14 20</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\charset.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 73</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 57</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\spi.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 80</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 81</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 13 66 18 19 42 36</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13 66 18 19 42 36</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\apps\touch_simple\main_touch_test.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 37</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 45 41 26 13 78 18 19 24 12 23 21 65 17 15 22</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45 41 26 13 78 18 19 24 12 23 21 17 15 22</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\apps\touch_simple\main_touch_simple.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 75</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 64</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 45 41 26 13 78 18 19 24 12 23 21 65 17 15 22</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45 41 26 13 78 18 19 24 12 23 21 17 15 22</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main_lcdspi.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 25</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 29</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13 78 18 19 42 36</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\hal_lcd\I2C_master.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 34</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 60</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13 78 18 19 31 24 12 23 21 17 15 22</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\hal_lcd\charset.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 73</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 57</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\hal_lcd\display.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 35</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 55</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 13 78 18 19 28 27 90</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13 78 18 19 28 27 90</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\apps\lcd_simple\main_lcd_simple.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 40</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 68</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 13 78 18 19 90 28 27</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13 78 18 19 90 28 27</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\apps\touch_simple\structure.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 56</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 79</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 26 13 66 18 19 24 12 23 21 65 17 15 22</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 26 13 66 18 19 24 12 23 21 17 15 22</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\apps\touch_simple\main_touch_lcd.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 71</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 13 66 18 19 45 41 26 24 12 23 21 65 17 15 22 42 36</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13 66 18 19 45 41 26 24 12 23 21 17 15 22 42 36</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Sense\Exe\LarsLCD.d43</name>
-      <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 67 69 76 84 83 49 92 16</file>
+          <file> 39</file>
         </tool>
-      </inputs>
+      </outputs>
     </file>
     <file>
       <name>$PROJ_DIR$\Sense\Obj\LarsLCD.pbd</name>
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 82 62 86 85 71 93</file>
+          <file> 28 11 32 31 23 43</file>
         </tool>
       </inputs>
     </file>
@@ -782,17 +541,17 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 33</file>
+          <file> 53</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 32</file>
+          <file> 52</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 13 78 18 19</file>
+          <file> 6 21 4 2</file>
         </tool>
       </inputs>
     </file>
@@ -801,11 +560,11 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 75</file>
+          <file> 27</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 64</file>
+          <file> 16</file>
         </tool>
       </outputs>
     </file>
@@ -814,11 +573,11 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 87</file>
+          <file> 37</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 37</file>
+          <file> 60</file>
         </tool>
       </outputs>
     </file>
@@ -827,21 +586,486 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 72</file>
+          <file> 18</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 70</file>
+          <file> 13</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 13 78 18 19 27</file>
+          <file> 6 21 4 2 41</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 13 78 18 19 27</file>
+          <file> 6 21 4 2 41</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Sense\Exe\LarsLCD.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 9 12 19 30 29 75 42 93</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\apps\touch_simple\structure.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 73</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 49 6 10 4 2 89 7 91 0 8 1 92 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49 6 10 4 2 89 7 91 0 1 92 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\apps\touch_simple\main_touch_lcd.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 75</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 10 4 2 64 58 49 89 7 91 0 8 1 92 90 59 56</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 64 58 49 89 7 91 0 1 92 90 59 56</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hal_lcd\i2c_lib_bitbang.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 61</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 21 4 2 41 51</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hal_sense\CTS_HAL.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 58 49 6 10 4 2 89 7 91 0 8 1 92 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58 49 6 10 4 2 89 7 91 0 1 92 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hal_sense\CTS_Layer.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 19</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 64 58 49 6 10 4 2 89 7 91 0 8 1 92 90 5 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64 58 49 6 10 4 2 89 7 91 0 1 92 90 5 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\charset.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\spi.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 25</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 10 4 2 59 56</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 59 56</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\apps\touch_simple\main_touch_test.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 60</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 64 58 49 6 21 4 2 89 7 91 0 8 1 92 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64 58 49 6 21 4 2 89 7 91 0 1 92 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\apps\touch_simple\main_touch_simple.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 27</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 64 58 49 6 21 4 2 89 7 91 0 8 1 92 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64 58 49 6 21 4 2 89 7 91 0 1 92 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hal_lcd\I2C_master.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 54</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 38</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 21 4 2 51 89 7 91 0 1 92 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_lcdspi.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 21 4 2 59 56</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hal_lcd\display.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 55</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 74</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 21 4 2 46 41 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 21 4 2 46 41 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\hal_lcd\charset.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_touch_lcd.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 75</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 10 4 2 80 77 82 89 7 91 0 8 1 92 90 84 86</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 80 77 82 89 7 91 0 1 92 90 84 86</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\CTS_HAL.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 28</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 77 82 6 10 4 2 89 7 91 0 8 1 92 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 77 82 6 10 4 2 89 7 91 0 1 92 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\CTS_Layer.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 19</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 80 77 82 6 10 4 2 89 7 91 0 8 1 92 90 5 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 80 77 82 6 10 4 2 89 7 91 0 1 92 90 5 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\sense_structure.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 82 6 10 4 2 89 7 91 0 8 1 92 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82 6 10 4 2 89 7 91 0 1 92 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\lcd.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 10 4 2 84 86</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 84 86</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\lcd_charset.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 29</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_game.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 96</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 95</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 10 4 2 84 86 80 77 82 89 7 91 0 8 1 92 90</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 84 86 80 77 82 89 7 91 0 1 92 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_lcd_simple.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 66</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 84 86</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\apps\lcd_simple\main_lcd_simple.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 66</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 21 4 2 35 46 41</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 21 4 2 35 46 41</file>
         </tool>
       </inputs>
     </file>
@@ -865,6 +1089,33 @@
   <configuration>
     <name>Simple</name>
     <outputs>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
+      <file>$TOOLKIT_DIR$\config\lnk430G2553.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2452.h</file>
+      <file>$PROJ_DIR$\main_touch_simple.c</file>
+      <file>$PROJ_DIR$\main_touch_test.c</file>
+      <file>$PROJ_DIR$\apps\touch_simple\structure.c</file>
+      <file>$PROJ_DIR$\apps\touch_simple\main_touch_lcd.c</file>
+      <file>$PROJ_DIR$\apps\touch_simple\structure.h</file>
+      <file>$PROJ_DIR$\charset.h</file>
+      <file>$PROJ_DIR$\hal_sense\CTS_HAL.c</file>
+      <file>$PROJ_DIR$\hal_sense\CTS_HAL.h</file>
+      <file>$PROJ_DIR$\spi.h</file>
+      <file>$PROJ_DIR$\hal_sense\CTS_Layer.c</file>
+      <file>$PROJ_DIR$\charset.c</file>
+      <file>$PROJ_DIR$\hal_sense\CTS_Layer.h</file>
+      <file>$PROJ_DIR$\spi.c</file>
+      <file>$PROJ_DIR$\main_lcdspi.c</file>
+      <file>$PROJ_DIR$\Simple\Obj\charset.r43</file>
       <file>$PROJ_DIR$\main_touch_lcd.c</file>
       <file>$PROJ_DIR$\CTS_HAL.h</file>
       <file>$PROJ_DIR$\CTS_HAL.c</file>
@@ -878,151 +1129,126 @@
       <file>$PROJ_DIR$\lcd_charset.h</file>
       <file>$PROJ_DIR$\main_game.c</file>
       <file>$PROJ_DIR$\main_lcd_simple.c</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdlib.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\inc\in430.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\ysizet.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
-      <file>$PROJ_DIR$\apps\touch_simple\structure.h</file>
-      <file>$PROJ_DIR$\charset.h</file>
-      <file>$PROJ_DIR$\hal_sense\CTS_HAL.c</file>
-      <file>$PROJ_DIR$\hal_sense\CTS_HAL.h</file>
-      <file>$PROJ_DIR$\spi.h</file>
-      <file>$PROJ_DIR$\hal_sense\CTS_Layer.c</file>
-      <file>$PROJ_DIR$\charset.c</file>
-      <file>$PROJ_DIR$\hal_sense\CTS_Layer.h</file>
-      <file>$PROJ_DIR$\spi.c</file>
-      <file>$PROJ_DIR$\main_lcdspi.c</file>
-      <file>$PROJ_DIR$\apps\touch_simple\structure.c</file>
-      <file>$PROJ_DIR$\apps\touch_simple\main_touch_lcd.c</file>
-      <file>$PROJ_DIR$\Simple\Obj\charset.r43</file>
-      <file>$PROJ_DIR$\Simple\Obj\CTS_HAL.r43</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\main_lcdspi.pbi</file>
-      <file>$PROJ_DIR$\Simple\Obj\main_touch_lcd.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\CTS_HAL.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\main_lcdspi.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\LarsLCD.pbd</file>
       <file>$PROJ_DIR$\Simple\Obj\CTS_HAL.pbi</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_touch_lcd.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\CTS_Layer.pbi</file>
       <file>$PROJ_DIR$\Simple\Obj\spi.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\CTS_Layer.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\lcd_charset.pbi</file>
       <file>$PROJ_DIR$\Simple\Obj\lcd.pbi</file>
-      <file>$PROJ_DIR$\Simple\Obj\main_touch_lcd.pbi</file>
       <file>$PROJ_DIR$\Simple\Obj\lcd.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\lcd_charset.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\main_game.pbi</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_touch_lcd.pbi</file>
       <file>$PROJ_DIR$\Simple\Obj\main_game.r43</file>
-      <file>$PROJ_DIR$\Simple\Obj\sense_structure.pbi</file>
-      <file>$PROJ_DIR$\Simple\Obj\main_touch_simple.pbi</file>
-      <file>$PROJ_DIR$\Simple\Obj\main_lcd_simple.r43</file>
-      <file>$PROJ_DIR$\Simple\Obj\main_lcd_simple.pbi</file>
-      <file>$PROJ_DIR$\Simple\Obj\main_touch_test.pbi</file>
-      <file>$PROJ_DIR$\Simple\Obj\main_touch_simple.r43</file>
-      <file>$PROJ_DIR$\Simple\Obj\sense_structure.r43</file>
-      <file>$PROJ_DIR$\Simple\Obj\main_touch_test.r43</file>
       <file>$PROJ_DIR$\Simple\Obj\spi.pbi</file>
       <file>$PROJ_DIR$\Simple\Exe\LarsLCD.d43</file>
       <file>$PROJ_DIR$\Simple\Obj\charset.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
-      <file>$TOOLKIT_DIR$\config\lnk430G2553.xcl</file>
-      <file>$TOOLKIT_DIR$\inc\msp430g2452.h</file>
-      <file>$PROJ_DIR$\main_touch_simple.c</file>
-      <file>$PROJ_DIR$\main_touch_test.c</file>
+      <file>$PROJ_DIR$\Simple\Obj\sense_structure.pbi</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_touch_simple.pbi</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_lcd_simple.pbi</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_touch_test.pbi</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_touch_simple.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_lcd_simple.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\sense_structure.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_touch_test.r43</file>
+      <file>$PROJ_DIR$\Simple\List\LarsLCD.map</file>
+      <file>$PROJ_DIR$\Simple\Obj\5x8_vertikal_LSB_2.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\5x8_vertikal_MSB_1.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\5x8_vertikal_LSB_1.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\5x8_vertikal_MSB_2.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\dotfactory.pbi</file>
+      <file>$PROJ_DIR$\Simple\Obj\dotfactory.r43</file>
+      <file>$PROJ_DIR$\dotfactory.c</file>
+      <file>$PROJ_DIR$\5x8_vertikal_MSB_1.h</file>
+      <file>$PROJ_DIR$\12x16_vertikal_MSB_1.h</file>
+      <file>$PROJ_DIR$\5x8_vertikal_LSB_1.h</file>
+      <file>$PROJ_DIR$\5x8_vertikal_LSB_1.asm</file>
+      <file>$PROJ_DIR$\5x8_vertikal_LSB_2.asm</file>
+      <file>$PROJ_DIR$\5x8_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\5x8_vertikal_MSB_1.asm</file>
+      <file>$PROJ_DIR$\5x8_vertikal_MSB_2.asm</file>
+      <file>$PROJ_DIR$\5x8_vertikal_MSB_2.h</file>
+      <file>$PROJ_DIR$\6x8_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\6x8_vertikal_LSB_1.h</file>
+      <file>$PROJ_DIR$\8x8_vertikal_LSB_1.h</file>
+      <file>$PROJ_DIR$\8x8_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\10x16_vertikal_LSB_1.h</file>
+      <file>$PROJ_DIR$\10x16_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\12x16_vertikal_LSB_2.h</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_lcd_dotfactory.r43</file>
+      <file>$PROJ_DIR$\Simple\Obj\main_lcd_dotfactory.pbi</file>
+      <file>$PROJ_DIR$\dotfactory.h</file>
+      <file>$PROJ_DIR$\main_lcd_dotfactory.c</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 64</file>
+          <file> 62 72</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\main_touch_lcd.c</name>
+      <name>$PROJ_DIR$\main_touch_simple.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 41</file>
+          <file> 68</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 50</file>
+          <file> 65</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_touch_test.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 71</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\apps\touch_simple\structure.c</name>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 14 67 19 20</file>
+          <file> 16 6 11 4 2 40 7 42 0 1 43 41</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\CTS_HAL.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 39</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 44</file>
-        </tool>
-      </outputs>
+      <name>$PROJ_DIR$\apps\touch_simple\main_touch_lcd.c</name>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 1</file>
+          <file> 6 11 4 2 23 19 16 40 7 42 0 1 43 41</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\CTS_Layer.c</name>
+      <name>$PROJ_DIR$\hal_sense\CTS_HAL.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 47</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 4 1 15 13 24 22 18 16 23 21</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\sense_structure.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 61</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 55</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\lcd.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 51</file>
+          <file> 46</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -1032,16 +1258,52 @@
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 14 67 19 20 8 10</file>
+          <file> 19 16 6 10 4 2 40 7 42 0 8 1 43 41</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 14 67 19 20 8 10</file>
+          <file> 19 16 6 10 4 2 40 7 42 0 1 43 41</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\lcd_charset.c</name>
+      <name>$PROJ_DIR$\hal_sense\CTS_Layer.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 53</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 23 19 16 6 10 4 2 40 7 42 0 8 1 43 41 5 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23 19 16 6 10 4 2 40 7 42 0 1 43 41 5 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\charset.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\spi.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
@@ -1049,81 +1311,22 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 48</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main_game.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 54</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 53</file>
+          <file> 61</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 14 67 19 20 8 10</file>
+          <file> 6 10 4 2 20 17</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 14 67 19 20 8 10</file>
+          <file> 6 10 4 2 20 17</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\main_lcd_simple.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 57</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 58</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 14 67 19 20 8 10</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 14 67 19 20 8 10</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\hal_sense\CTS_HAL.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 39</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 44</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 29 26 14 67 19 20 25 13 24 22 66 18 16 23</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 29 26 14 67 19 20 25 13 24 22 18 16 23</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\hal_sense\CTS_Layer.c</name>
+      <name>$PROJ_DIR$\main_lcdspi.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
@@ -1137,29 +1340,35 @@
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 33 29 26 14 67 19 20 25 13 24 22 66 18 16 23 15 21</file>
+          <file> 6 10 4 2 20 17</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 33 29 26 14 67 19 20 25 13 24 22 18 16 23 15 21</file>
+          <file> 6 10 4 2 20 17</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\charset.c</name>
+      <name>$PROJ_DIR$\main_touch_lcd.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 38</file>
+          <file> 50</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 65</file>
+          <file> 59</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2</file>
+        </tool>
+      </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\spi.c</name>
+      <name>$PROJ_DIR$\CTS_HAL.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
@@ -1167,58 +1376,127 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 63</file>
+          <file> 49</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 14 67 19 20 30 27</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 14 67 19 20 30 27</file>
+          <file> 28</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\main_lcdspi.c</name>
+      <name>$PROJ_DIR$\CTS_Layer.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 42</file>
+          <file> 53</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 40</file>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31 28 5 7 42 0 1 43 41 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\sense_structure.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 70</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\lcd.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 56</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 55</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 14 67 19 20 30 27</file>
+          <file> 6 10 4 2 35 37</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 14 67 19 20 30 27</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\apps\touch_simple\structure.c</name>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 26 14 69 19 20 25 13 24 22 18 16 23</file>
+          <file> 6 10 4 2 35 37</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\apps\touch_simple\main_touch_lcd.c</name>
-      <inputs>
+      <name>$PROJ_DIR$\lcd_charset.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 57</file>
+        </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 14 69 19 20 33 29 26 25 13 24 22 18 16 23</file>
+          <file> 54</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_game.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 60</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 10 4 2 35 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 35 37</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_lcd_simple.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 69</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 6 10 4 2 35 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 35 37</file>
         </tool>
       </inputs>
     </file>
@@ -1227,44 +1505,102 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 49 48 58</file>
+          <file> 77 55 54 66</file>
         </tool>
       </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\Simple\Exe\LarsLCD.d43</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 68 51 52 57 17</file>
+          <file> 9 78 56 57 69 44</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\main_touch_simple.c</name>
+      <name>$PROJ_DIR$\dotfactory.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 60</file>
+          <file> 78</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 56</file>
+          <file> 77</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 98 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 98 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\5x8_vertikal_LSB_1.asm</name>
+      <outputs>
+        <tool>
+          <name>A430</name>
+          <file> 75</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\main_touch_test.c</name>
+      <name>$PROJ_DIR$\5x8_vertikal_LSB_2.asm</name>
+      <outputs>
+        <tool>
+          <name>A430</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\5x8_vertikal_MSB_1.asm</name>
+      <outputs>
+        <tool>
+          <name>A430</name>
+          <file> 74</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\5x8_vertikal_MSB_2.asm</name>
+      <outputs>
+        <tool>
+          <name>A430</name>
+          <file> 76</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main_lcd_dotfactory.c</name>
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 62</file>
+          <file> 96</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 59</file>
+          <file> 97</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 10 4 2 35 37 98</file>
+        </tool>
+      </inputs>
     </file>
     <forcedrebuild>
       <name>$PROJ_DIR$\main_touch_lcd.c</name>

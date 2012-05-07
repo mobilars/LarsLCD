@@ -24,21 +24,15 @@ unsigned char line;
 #define MOSI_HIGH P1OUT |= MOSI_PIN
 #define DELAY __delay_cycles(10)
 
-// Delay function. # of CPU cycles delayed is similar to "cycles". Specifically,
-// it's ((cycles-15) % 6) + 15.  Not exact, but gives a sense of the real-time
-// delay.  Also, if MCLK ~1MHz, "cycles" is similar to # of useconds delayed.
-/*
-void delay_cycles(unsigned int cycles)
-{
-  while(cycles>15)                          // 15 cycles consumed by overhead
-    cycles = cycles - 6;                    // 6 cycles consumed each iteration
-}
-*/
-
 
 //******************************************************************************
 // Support for  USCI_B0
 //******************************************************************************
+
+// Remove this to use bitbanging (if the chip doesn't have USCI or other reason)
+#define USCI
+
+#ifdef UCB0CTL0_
 
 void SPISetup(void)
 {
@@ -85,6 +79,22 @@ void SPISetup(void)
   
 }
 
+void partial()
+{
+  // Doesn't work. 
+  SPIWrite(CMD, 0x21);  //Function set PD=0,H1=0,H0=1
+  SPIWrite(CMD, 0x10+0x00);  //SET Bias system
+  SPIWrite(CMD, 0X80+0x30);  //SET V0
+  
+  SPIWrite(CMD, 0x20);  //Function set PD=0,H1=0,H0=0
+  SPIWrite(CMD, 0x05);  // 101 Partial display enable  
+  SPIWrite(CMD, 0x09);  // 1001 Partial display size
+  //SPIWrite(CMD, 0x08);  // 1000 Partial display size
+  SPIWrite(CMD, 0x10 + 0x00);  // Where to start
+  SPIWrite(CMD, 0x80 + 0x00);  // Vop
+  //SPIWrite(CMD, 0x28);  //Function set PD=0,H1=0,H0=0 reverse directions
+}
+
 // HW SPI write
 void SPIWrite(char addr, char value)
 {   
@@ -100,9 +110,12 @@ void SPIWrite(char addr, char value)
   P1OUT |= CSB_PIN;         // /CS disable
 }
 
-// Bit banging setup code
 
-void SPIBBSetup(void)
+#else 
+// Bit banging setup code
+#warning Bitbanging SPI used
+
+void SPISetup(void)
 {
   P1OUT |= CSB_PIN |  MOSI_PIN | SCLK_PIN;  
   P1DIR |= CSB_PIN |  MOSI_PIN | SCLK_PIN;         // /CS disable
@@ -126,23 +139,8 @@ void SPIBBSetup(void)
 
 }
 
-void partial()
-{
-  // Doesn't work. 
-  SPIWrite(CMD, 0x21);  //Function set PD=0,H1=0,H0=1
-  SPIWrite(CMD, 0x10+0x00);  //SET Bias system
-  SPIWrite(CMD, 0X80+0x30);  //SET V0
-  
-  SPIWrite(CMD, 0x20);  //Function set PD=0,H1=0,H0=0
-  SPIWrite(CMD, 0x05);  // 101 Partial display enable  
-  SPIWrite(CMD, 0x09);  // 1001 Partial display size
-  //SPIWrite(CMD, 0x08);  // 1000 Partial display size
-  SPIWrite(CMD, 0x10 + 0x00);  // Where to start
-  SPIWrite(CMD, 0x80 + 0x00);  // Vop
-  //SPIWrite(CMD, 0x28);  //Function set PD=0,H1=0,H0=0 reverse directions
-}
-
-void SPIBBWrite(char conf, char value)
+// Bitbanging code
+void SPIWrite(char conf, char value)
 {
   CSB_LOW;        // /CS enable
   
@@ -171,6 +169,22 @@ void SPIBBWrite(char conf, char value)
   
 }
 
+#endif
+
+/*
+void writeCharFullCharset(unsigned char c)
+{
+
+  for (int i = 0; i < 5; i++) {
+      SPIWrite(DATA, font_5_8[c][i]);
+  }
+  
+  // One column between characters...
+  SPIWrite(DATA, 0x00);
+    
+}
+*/
+
 void writeChar(unsigned char chr)
 {
   // ASCII 7-bit only...
@@ -193,22 +207,15 @@ void writeChar(unsigned char chr)
   // One column between characters...
   SPIWrite(DATA, 0x00);
   
-  /*
-  // Update the cursor position...
-  column = (column + 6) % width;
-  
-  if (column == 0) {
-    line = (line + 1) % (height/9 + 1);
-  }
-  */
 }
 
 void clear()
 {
-  // Todo implement burst mode for SW I2C
+  int i;
+  
   setCursor(0, 0);
 
-  for (int i = 0; i < 9; i++) {
+  for (i = 0; i < 9; i++) {
       setCursor(0, i);
       for (unsigned char j = 0; j < width; j++) 
       {
@@ -221,7 +228,6 @@ void clear()
 void setCursor(unsigned char column, unsigned char line)
 {
   column = (column % width);
-  //line = (line % (height/9 + 1));
   line = (line % 8);
   
   SPIWrite(CMD, 0x80 | column);
@@ -230,15 +236,16 @@ void setCursor(unsigned char column, unsigned char line)
 
 void writeString(char * str)
 {
-  for (int i = 0; i < 100; i++) {
+  int i;
+  
+  for (i = 0; i < 100; i++) {
     if (str[i] == '\0') break;
     writeChar(str[i]);
   }
 
 }
 
-
-void writeMegaFont(char xpos, char ypos, char ch)
+void writeMegaNumber(char xpos, char ypos, char ch)
 {
   unsigned char i, j;
   
@@ -251,23 +258,13 @@ void writeMegaFont(char xpos, char ypos, char ch)
   else
     ch = ch & 0x0f;
   
-  char d[17];
-  d[0] = DATA;
-  
   for(i=0;i<3;i++)
   {	
-    setCursor(xpos*12+6, i + ypos*3+1);   
+    setCursor(xpos, i + ypos);   
     for(j=0; j<16; j++) {
       SPIWrite(DATA,number[ch][i][j]);
-      d[j+1] = number[ch][i][j];
     }
-    //SPIWrite(d, 17);
   } 
-  
-  //	if(ch == '.') 
-  //		char_start += 5;
-  //	else
-  //		char_start += 12;
 }
 
 void drawBitmap(const unsigned char *data, unsigned char mx, unsigned char my, char xpos, char ypos)
