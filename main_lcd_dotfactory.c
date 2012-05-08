@@ -21,8 +21,6 @@ void main (void)
     
   clear();
   
-
-  //writeSansSerif(0,0,'1');
   writeSansSerifString(0,0,"01234");
   writeSansSerifString(0,1,"56789");
   writeJingJingString(0,2,"123456789");

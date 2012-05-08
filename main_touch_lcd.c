@@ -4,7 +4,6 @@
 #include "lcd.h"
 #include "lcd_charset.h"
 
-
 // Uncomment to have this compiler directive run characterization functions only
 // Comment to have this compiler directive run example application
 //#define ELEMENT_CHARACTERIZATION_MODE	
@@ -57,7 +56,11 @@ void main(void)
   TI_CAPT_Update_Baseline(&button_bar,5);  
   
   SPISetup();                         // Initialize SPI Display
-  drawBitmap(blackbird_96_64, 96, 8, 0, 0);    
+  //drawBitmap(blackbird_96_64, 96, 8, 0, 0);    
+  
+  clear();
+  //setcharmode(1); //largechars
+  //writeString(2,1,"Press button!");
   
   // Main loop starts here
   while (1)
@@ -85,6 +88,7 @@ void main(void)
                             clear();
                             last = 2;
                             drawBitmap(big_1, 32, 6, 32, 1);
+                            //writeString(4,3,"A Pressed");
                         }
 		}
 		if(keyPressed == &b_element)
@@ -94,6 +98,7 @@ void main(void)
                             clear();
                             last = 3;
                             drawBitmap(big_2, 32, 6, 32, 1);
+                            //writeString(4,3,"B Pressed");
                         }
 		}
 		if(keyPressed == &c_element)
@@ -103,6 +108,7 @@ void main(void)
                             clear();
                             last = 1;
                             drawBitmap(big_3, 32, 6, 32, 1);
+                            //writeString(4,3,"C Pressed");
                         }
 		}
 		if(keyPressed == &d_element)
@@ -112,6 +118,7 @@ void main(void)
                             clear();
                             last = 4;
                             drawBitmap(big_4, 32, 6, 32, 1);
+                            //writeString(4,3,"D Pressed");
                         }
 		}		
 	  }
@@ -121,6 +128,7 @@ void main(void)
               if (last != 0) 
               {
                 drawBitmap(blackbird_96_64, 96, 8, 0, 0);  
+                //writeString(4,4,"Press a button");
                 last = 0;
               }
 	  }      

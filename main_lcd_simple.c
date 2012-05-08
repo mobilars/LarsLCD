@@ -34,29 +34,25 @@ void main (void)
     if ((P1IN & BIT0) == 0x00) {
         clearlast(last);
         last = 1;
-        setCursor(0, 0);
-        writeString("   Pressed 1    ");
+        writeString(0,0,"   Pressed 1    ");
         drawBitmap(big_1, 32, 6, 32, 1);
     }
     else if ((P1IN & BIT1) == 0x00) {
         clearlast(last);
         last = 2;
-        setCursor(0, 0);
-        writeString("   Pressed 2    ");
+        writeString(0,0,"   Pressed 2    ");
         drawBitmap(big_2, 32, 6, 32, 1);
     }
     else if ((P2IN & BIT1) == 0x00) {
         clearlast(last);
         last = 3;
-        setCursor(0, 0);
-        writeString("   Pressed 3    ");
+        writeString(0,0,"   Pressed 3    ");
         drawBitmap(big_3, 32, 6, 32, 1);
     }
     else if ((P2IN & BIT2) == 0x00) {
         clearlast(last);
         last = 4;
-        setCursor(0, 0);
-        writeString("   Pressed 4    ");
+        writeString(0,0,"   Pressed 4    ");
         drawBitmap(big_4, 32, 6, 32, 1);
     }
     else {
@@ -66,9 +62,7 @@ void main (void)
           drawBitmap(blackbird_96_64, 96, 8, 0,0);
         }
         last = 0;
-        setCursor(0, 0);
-        writeString(" Press a button ");
-        writeMegaNumber(3, 1, '0');
+        writeString(0,0," Press a button ");
     }
   }
   
