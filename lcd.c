@@ -9,7 +9,7 @@
 #include "lcd_charset.h"
 
 #define uselargechar 0
-#define usescreenrotate 1
+#define usescreenrotate 0
 
 unsigned char pixelmode=1; // 1= setpixels; 0 =clrpixels;
 unsigned char normalchar=1; // 1=normalchar 0=largechar;
