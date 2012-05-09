@@ -8,8 +8,8 @@
 #include "lcd.h"
 #include "lcd_charset.h"
 
-#define uselargechar 1
-#define usescreenrotate 0
+#define uselargechar 0
+#define usescreenrotate 1
 
 unsigned char pixelmode=1; // 1= setpixels; 0 =clrpixels;
 unsigned char normalchar=1; // 1=normalchar 0=largechar;
@@ -32,8 +32,8 @@ unsigned char line;
 #define CSB_HIGH P1OUT |= CSB_PIN
 #define SCLK_LOW P1OUT &= ~SCLK_PIN
 #define SCLK_HIGH P1OUT |= SCLK_PIN
-#define RESB_LOW P1OUT &= ~RESB_PIN
-#define RESB_HIGH P1OUT |= RESB_PIN
+//#define RESB_LOW P1OUT &= ~RESB_PIN
+//#define RESB_HIGH P1OUT |= RESB_PIN
 #define MOSI_LOW P1OUT &= ~MOSI_PIN
 #define MOSI_HIGH P1OUT |= MOSI_PIN
 #define DELAY __delay_cycles(10)
@@ -62,11 +62,9 @@ void SPISetup(void)
     UCB0CTL0 |= UCMST+UCCKPH+UCMSB+UCSYNC;    // 3-pin, 8-bit SPI master
     UCB0CTL1 |= UCSSEL_2;                     // SMCLK
     UCB0BR0 = 0x02;                           // UCLK/2
-    UCB0BR1 = 0;
+    UCB0BR1 = 0;  
     
-    
-    P1SEL |= MOSI_PIN      | BIT6            | SCLK_PIN;
-    
+    P1SEL  |= MOSI_PIN     | BIT6            | SCLK_PIN;    
     P1SEL2 |= MOSI_PIN     | BIT6            | SCLK_PIN;
     
     // SPI option select
@@ -290,7 +288,7 @@ void writeHex (char x,char y,const unsigned char out) {
     writeChar (x,y,temp);
 }
 
-void writeInt (char x, char y,const unsigned int out, unsigned int precision)
+void writeInt (char x, char y, const unsigned int out, unsigned int precision)
 {
     unsigned int temp1;
     unsigned char temp2, i;
@@ -341,32 +339,33 @@ void setCursor(unsigned char column, unsigned char line) // position in pixels t
 }
 
 void writeString(char x, char y, char * str)
-{ int i;
-
-for ( i = 0; i < 100; i++) {
-    if (str[i] == '\0') break;
-    writeChar(x,y, str[i]);
+{ 
+    int i;
+    
+    for ( i = 0; i < 100; i++) {
+        if (str[i] == '\0') break;
+        writeChar(x,y, str[i]);
 #if  usescreenrotate==0
-    {if (normalchar)
-    {x=x+6;}
-    else
-    { x=x+16;
-    }
-    }
+        {if (normalchar)
+        {x=x+6;}
+        else
+        { x=x+16;
+        }
+        }
 #endif
 #if usescreenrotate==1
-    if (rotatedscreen==1)
-    { if (normalchar)
-    { x=x+1;
-    }
-    else
-    {
-        x=x+2;
-    }
-    }
+        if (rotatedscreen==1)
+        { if (normalchar)
+        { x=x+1;
+        }
+        else
+        {
+            x=x+2;
+        }
+        }
 #endif
-    
-}
+        
+    }
 }
 
 

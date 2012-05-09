@@ -10,7 +10,7 @@
 **  Font data for Courier New 6pt generated with DOTFACTORY, FLIPY, LSBFIRST, FIXED WIDTH&HEIGHT
 */
 
-const char numcharR[10][30] =
+const unsigned char numcharR[10][30] =
 {
 
 		// @0 '0' (11 pixels wide)
@@ -186,7 +186,7 @@ const char numcharR[10][30] =
 };
 
 /* Character bitmaps for Courier New 6pt */
-const char charsetR[][8] =
+const unsigned char charsetR[][8] =
 {
 		{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},	// 0x20
 		{0x08,0x1C,0x1C,0x08,0x08,0x00,0x08,0x00},	// 0x21
