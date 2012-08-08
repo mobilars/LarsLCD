@@ -8,7 +8,7 @@
 #include "lcd.h"
 #include "lcd_charset.h"
 
-#define uselargechar 0
+#define uselargechar 1
 #define usescreenrotate 0
 
 unsigned char pixelmode=1; // 1= setpixels; 0 =clrpixels;
@@ -75,7 +75,7 @@ void SPISetup(void)
     SPIWrite(CMD, 0x21);  //Function set PD=0,H1=0,H0=1
     SPIWrite(CMD, 0x10+0x03);  //SET Bias system
     //SPIWrite(CMD, 0X80+0x29);  //SET V0
-    SPIWrite(CMD, 0X80+0x20);  //SET V0
+    SPIWrite(CMD, 0X80+0x30);  //SET V0
     
     SPIWrite(CMD, 0x20);  //Function set PD=0 ,H1=0, H0=0
     SPIWrite(CMD, 0x05);  //Set VLCD Range(PRS) 0x04 = VLo-low, 0x05 VO-high
@@ -123,7 +123,7 @@ void SPISetup(void)
     
     SPIWrite(CMD, 0x21);  //Function set PD=0,H1=0,H0=1
     SPIWrite(CMD, 0x10+0x03);  //SET Bias system
-    SPIWrite(CMD, 0X80+0x29);  //SET V0
+    SPIWrite(CMD, 0X80+0x29);  //SET V0 0x29
     SPIWrite(CMD, 0x20);  //Function set PD=0 ,H1=0, H0=0
     SPIWrite(CMD, 0x05);  //Set VLCD Range(PRS) 0x04 = VLo-low, 0x05 VO-high
     SPIWrite(CMD, 0x0C);  //Display control D=1 E=0 (Normal) 0x0C = normal display
@@ -285,8 +285,9 @@ void writeHex (char x,char y,const unsigned char out) {
     writeChar (x,y,temp);
     temp = out & 0x0f;
     temp += (temp > 9) ? 'A' - 10 : '0';
-    writeChar (x,y,temp);
+    writeChar (x+6,y,temp); //corr
 }
+
 
 void writeInt (char x, char y, const unsigned int out, unsigned int precision)
 {

@@ -78,8 +78,9 @@ int runGame()
 void gameOver()
 {
     clear();
-    setCursor(0, 3);
-    writeString("   GAME OVER    ");
+    //setCursor(0, 3);
+    writeString(20, 3, "GAME OVER");
+    //writeString("   GAME OVER    ");
 }
 
 void delay(int x)
@@ -92,12 +93,14 @@ void delay(int x)
 void drawBar(int bar)
 {
   if (bar == 0) {
-      setCursor(0, 7);
-      writeString("                ");
+    writeString(0,7,"                ");
+//      setCursor(0, 7);
+//      writeString("                ");
   }
   else {
-      setCursor(0, 7);
-      writeString("                ");
+//      setCursor(0, 7);
+//      writeString("                ");
+      writeString(0,7,"                ");
       setCursor((bar-1)*24, 7);
       for (int i = 0; i < 24; i++) {
           SPIWrite(DATA, 0xFF); 
@@ -110,11 +113,11 @@ void drawFigure(int x, int y)
   if (x < 90 && y < 9) {
       setCursor(x, y);
       for (int i = 0; i < 5; i++) {
-          //SPIWrite(DATA, 0xFF); 
-          SPIWrite(DATA, ball[i]); 
+          SPIWrite(DATA, 0xFF); 
+          //SPIWrite(DATA, ball[i]); 
       }
       for (int i = 0; i < 5; i++) {
-          SPIWrite(DATA, ball[4-i]); 
+          //SPIWrite(DATA, ball[4-i]); 
       }
   }
 }
